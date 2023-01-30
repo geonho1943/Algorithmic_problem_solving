@@ -1,4 +1,7 @@
-package java100;
+package org.problem.solving.BOJ;
+
+import java.util.Scanner;
+
 
 //x대학의 m교수님은 프로그래밍학습중..
 //30명의 학생중 28 명이 제출 함
@@ -10,8 +13,6 @@ package java100;
 //거기에 arr의 출번을 그 출번값의 자리에 입력 한다
 //그값의 빈 자리를 구한다면?
 // 별로 안좋은 알고리즘
-
-import java.util.Scanner;
 
 public class Java5579 {
 

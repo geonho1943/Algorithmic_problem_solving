@@ -1,4 +1,4 @@
-package java100;
+package org.problem.solving.BOJ;
 
 public class Main {
     public static void main(String[] args) {

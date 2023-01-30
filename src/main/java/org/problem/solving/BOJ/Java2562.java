@@ -1,4 +1,4 @@
-package java100;
+package org.problem.solving.BOJ;
 
 import java.util.Scanner;
 
