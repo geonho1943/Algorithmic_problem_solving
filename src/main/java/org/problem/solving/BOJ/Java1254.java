@@ -1,37 +1,33 @@
 package org.problem.solving.BOJ;
 
-import java.util.*;
-import java.io.*;
-//미해결.....
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+// for문 빠져나갈때 return으로 해결 할수 없어서 메서드를 사용했다
+// 알고리즘 할때 메서드 별로 안좋아 하지만 이제부터 계속 써야겠다
+
 public class Java1254 {
-
-    static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-    static StringBuilder sb = new StringBuilder();
-
-    static void solve() throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer stt = null;
-
-        String str = br.readLine().trim();
-        sb = new StringBuilder(str);
-
-        int N = str.length();
-
-        for(int i = 0; i < N; i++) {
-            sb = new StringBuilder(str.substring(i));
-            String s = sb.toString();
-            String rs = sb.reverse().toString();
-            if(s.equals(rs)) {
-                print(N+i);
-                return;
-            }
+    private static boolean prt_yn(String str) {
+        int sta = 0;
+        int la = str.length()-1;
+        while (sta <= la) {
+            if(str.charAt(sta) != str.charAt(la))
+                return false;
+            sta++; la--;
         }
-
-        br.close();
-        bw.close();
+        return true;
     }
     public static void main(String[] args) throws IOException {
-        solve();
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        String str = in.readLine();
+        int ans = str.length();
+        for (int i=0; i < str.length(); i++) {
+            if (prt_yn(str.substring(i))) break;
+            ans++;
+        }
+        System.out.println(ans);
     }
-    static void print(int opih) { System.out.println(opih); }
 }
+
+
