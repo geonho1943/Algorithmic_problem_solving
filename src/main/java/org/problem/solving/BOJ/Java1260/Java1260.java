@@ -9,8 +9,9 @@ import java.util.StringTokenizer;
 
 public class Java1260 {
     static StringBuilder sb = new StringBuilder();
-    public int N;
-    public void solve() throws IOException {
+    static int N;
+
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         N = Integer.parseInt(st.nextToken())+1;
@@ -34,7 +35,7 @@ public class Java1260 {
         BFS(map,vis,que);
         System.out.println(sb);
     }
-    public void DFS(int[][] map, int[][] vis, int fr) {
+    public static void DFS(int[][] map, int[][] vis, int fr) {
         sb.append(fr+" ");
         for (int i = 0; i < N; ++i) {
             vis[i][fr] =1;//방문 했다고 저장
@@ -46,9 +47,9 @@ public class Java1260 {
         }
 
     }
-    public void BFS(int[][] map, int[][] vis, Deque<Integer> que) {
-        while (que.size()>0){
-            Integer fr = que.pop();
+    public static void BFS(int[][] map, int[][] vis, Deque<Integer> que) {
+        while (!que.isEmpty()) {
+            Integer fr = que.poll();
             sb.append(fr+" ");
             for (int i = 0; i < N; ++i) {
                 vis[i][fr] =1;
@@ -59,11 +60,6 @@ public class Java1260 {
                 }
             }
         }
-    }
-
-    public static void main(String[] args) throws IOException {
-        Java1260 main = new Java1260();
-        main.solve();
 
     }
 }
