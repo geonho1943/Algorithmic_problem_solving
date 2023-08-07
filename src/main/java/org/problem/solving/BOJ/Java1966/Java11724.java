@@ -27,10 +27,9 @@ public class Java11724 {
                 int[] cDoc = docuLevel.poll(); //비교할 문서의 요소를 배열로 보유
                 boolean bigLevel = true;
 
-                for (int i = 0; i < docuLevel.size(); i++) {//doc 과 cDoc을 순회하며 비교후 t/f 저장
-                    int[] doc = docuLevel.get(i);
-                    if (cDoc[1] < doc[1]){
-                        bigLevel =false;
+                for (int[] doc : docuLevel) {//doc 과 cDoc을 순회하며 비교후 t/f 저장
+                    if (cDoc[1] < doc[1]) {
+                        bigLevel = false;
                         break;
                     }
                 }
