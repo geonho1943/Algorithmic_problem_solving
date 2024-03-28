@@ -3,7 +3,7 @@ package programmers.lessons181949;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-public class lessons181949 {
+public class Lessons181949 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String a = sc.next();

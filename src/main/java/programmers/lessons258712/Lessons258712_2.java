@@ -1,13 +1,11 @@
-package programmers;
-import java.util.*;
-public class Solution {
-public static void main(String[] args) {
-        System.out.println(
-            solution(
-                new String[]{"joy", "brad", "alessandro", "conan", "david"} ,
-                new String[]{"alessandro brad", "alessandro joy", "alessandro conan", "david alessandro", "alessandro david"}
-            )
-        );
+package programmers.lessons258712;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Lessons258712_2 {
+    public static void main(String[] args) {
+        System.out.println( solution(new String[]{"joy", "brad", "alessandro", "conan", "david"} , new String[]{"alessandro brad", "alessandro joy", "alessandro conan", "david alessandro", "alessandro david"}) );
     }
     private static int solution(String[] friends, String[] gifts) {
         int answer = 0;
