@@ -1,4 +1,4 @@
-package org.problem.solving.BOJ.Java1009.Java2566;
+package org.problem.solving.BOJ.Java2566;
 
 import java.io.BufferedReader;
 import java.io.IOException;
