@@ -4,7 +4,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Java1003 {
+public class
+
+Java1003 {
     static Integer[][] dp = new Integer[41][2];
     static Integer[] fibonacci(int N) {
         if(dp[N][0] == null || dp[N][1] == null) {
