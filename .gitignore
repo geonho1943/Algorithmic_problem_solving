@@ -9,11 +9,11 @@ target/
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
-
+Main
 *.iws
 *.iml
 *.ipr
-
+/src/main/java/org/problem/solving/BOJ/Main.class
 ### Eclipse ###
 .apt_generated
 .classpath
