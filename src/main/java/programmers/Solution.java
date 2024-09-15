@@ -1,11 +1,19 @@
 package programmers;
 public class Solution {
 public static void main(String[] args) {
-    double flo = 69.32;
-    System.out.println(solution(flo));
+    String my_string = "cccCCC";
+    System.out.println(solution(my_string));
     }
-    public static int solution(double flo) {
-        int answer = (int) flo;
-        return answer;
+    public static String solution(String my_string) {
+        StringBuilder answer = new StringBuilder();
+        for (int i = 0; i < my_string.length(); i++) {
+            char temp = my_string.charAt(i);
+            if (Character.isUpperCase(temp)){
+                answer.append(Character.toLowerCase(temp));
+            }else {
+                answer.append(Character.toUpperCase(temp));
+            }
+        }
+        return answer.toString();
     }
 }
