@@ -15,18 +15,14 @@ public class Java11054_2 {
         for (int i = 0; i < N; i++) {
             arr[i] = Integer.parseInt(st.nextToken());
         }
-
         int maxLength = 0;
         int[] dp;
-
         // 고점 i 설정
         for (int i = 0; i < N; i++) {
             dp = new int[N]; // DP 배열 초기화
-            dp[0] = 1;
-
+            Arrays.fill(dp, 1);
             for (int j = 0; j < N; j++) {
-
-                if (j < i && arr[j] < arr[i]) { // j가 i보다 작고,
+                if (j <= i && arr[j] <= arr[i]) { // j가 i보다 작고,
                     for (int k = 0; k < j; k++) {
                         if (arr[k] < arr[j]) { // 증가 조건 만족
                             dp[j] = Math.max(dp[j], dp[k] + 1);
@@ -40,12 +36,11 @@ public class Java11054_2 {
                     }
                 }
             }
-
             // 고점 i 일때 최댓값 갱신
             for (int j = 0; j < N; j++) {
                 maxLength = Math.max(maxLength, dp[j]);
             }
         }
-        System.out.println(maxLength + 1); // 고점 추가, 출력
+        System.out.println(maxLength); // 고점 추가, 출력
     }
 }
